@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8163ABB320945B8400817111 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABB220945B8400817111 /* AppDelegate.m */; };
+		8163ABB620945B8400817111 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABB520945B8400817111 /* ViewController.m */; };
+		8163ABB920945B8400817111 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABB720945B8400817111 /* Main.storyboard */; };
+		8163ABBB20945B8500817111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABBA20945B8500817111 /* Assets.xcassets */; };
+		8163ABBE20945B8500817111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABBC20945B8500817111 /* LaunchScreen.storyboard */; };
+		8163ABC120945B8500817111 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABC020945B8500817111 /* main.m */; };
+		8163ABCB20945D4E00817111 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABCA20945D4E00817111 /* TextViewController.m */; };
+		8163ABCE20945FBD00817111 /* TextFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABCD20945FBD00817111 /* TextFileManager.m */; };
+		8163ABD12094635500817111 /* FileLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABD02094635500817111 /* FileLoader.m */; };
+		8163AC1420946BC300817111 /* novel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABD320946BC200817111 /* novel.txt */; };
+		8163AC1520946BC300817111 /* nsEUCTWProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABD520946BC200817111 /* nsEUCTWProber.cpp */; };
+		8163AC1620946BC300817111 /* uchardet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABD620946BC200817111 /* uchardet.cpp */; };
+		8163AC1720946BC300817111 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABD920946BC200817111 /* CMakeLists.txt */; };
+		8163AC1820946BC300817111 /* nsMBCSGroupProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABDA20946BC200817111 /* nsMBCSGroupProber.cpp */; };
+		8163AC1920946BC300817111 /* nsSBCSGroupProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABDB20946BC200817111 /* nsSBCSGroupProber.cpp */; };
+		8163AC1A20946BC300817111 /* nsSBCharSetProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABDF20946BC200817111 /* nsSBCharSetProber.cpp */; };
+		8163AC1B20946BC300817111 /* nsBig5Prober.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABE020946BC200817111 /* nsBig5Prober.cpp */; };
+		8163AC1C20946BC300817111 /* EUCTWFreq.tab in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABE120946BC200817111 /* EUCTWFreq.tab */; };
+		8163AC1D20946BC300817111 /* nsEUCKRProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABE620946BC200817111 /* nsEUCKRProber.cpp */; };
+		8163AC1E20946BC300817111 /* nsGB2312Prober.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABE720946BC200817111 /* nsGB2312Prober.cpp */; };
+		8163AC1F20946BC300817111 /* nsMBCSSM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABE820946BC200817111 /* nsMBCSSM.cpp */; };
+		8163AC2020946BC300817111 /* JpCntx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABEA20946BC200817111 /* JpCntx.cpp */; };
+		8163AC2120946BC300817111 /* CharDistribution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABEB20946BC200817111 /* CharDistribution.cpp */; };
+		8163AC2220946BC300817111 /* nsLatin1Prober.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABEC20946BC200817111 /* nsLatin1Prober.cpp */; };
+		8163AC2320946BC300817111 /* nsEUCJPProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABED20946BC200817111 /* nsEUCJPProber.cpp */; };
+		8163AC2420946BC300817111 /* JISFreq.tab in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABEF20946BC200817111 /* JISFreq.tab */; };
+		8163AC2520946BC300817111 /* nsHebrewProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABF120946BC200817111 /* nsHebrewProber.cpp */; };
+		8163AC2620946BC300817111 /* EUCKRFreq.tab in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABF220946BC200817111 /* EUCKRFreq.tab */; };
+		8163AC2720946BC300817111 /* nsSJISProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABF320946BC200817111 /* nsSJISProber.cpp */; };
+		8163AC2820946BC300817111 /* nsCharSetProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABF420946BC200817111 /* nsCharSetProber.cpp */; };
+		8163AC2920946BC300817111 /* LangHungarianModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABF620946BC200817111 /* LangHungarianModel.cpp */; };
+		8163AC2A20946BC300817111 /* LangVietnameseModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABF720946BC200817111 /* LangVietnameseModel.cpp */; };
+		8163AC2B20946BC300817111 /* LangBulgarianModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABF820946BC200817111 /* LangBulgarianModel.cpp */; };
+		8163AC2C20946BC300817111 /* LangFrenchModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABF920946BC200817111 /* LangFrenchModel.cpp */; };
+		8163AC2D20946BC300817111 /* LangThaiModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABFA20946BC200817111 /* LangThaiModel.cpp */; };
+		8163AC2E20946BC300817111 /* LangSpanishModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABFB20946BC200817111 /* LangSpanishModel.cpp */; };
+		8163AC2F20946BC300817111 /* LangArabicModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABFC20946BC200817111 /* LangArabicModel.cpp */; };
+		8163AC3020946BC300817111 /* LangRussianModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABFD20946BC200817111 /* LangRussianModel.cpp */; };
+		8163AC3120946BC300817111 /* LangHebrewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABFE20946BC200817111 /* LangHebrewModel.cpp */; };
+		8163AC3220946BC300817111 /* LangEsperantoModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABFF20946BC200817111 /* LangEsperantoModel.cpp */; };
+		8163AC3320946BC300817111 /* LangTurkishModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC0020946BC200817111 /* LangTurkishModel.cpp */; };
+		8163AC3420946BC300817111 /* LangGermanModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC0120946BC200817111 /* LangGermanModel.cpp */; };
+		8163AC3520946BC300817111 /* LangGreekModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC0220946BC200817111 /* LangGreekModel.cpp */; };
+		8163AC3620946BC300817111 /* LangDanishModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC0320946BC200817111 /* LangDanishModel.cpp */; };
+		8163AC3720946BC300817111 /* Big5Freq.tab in Resources */ = {isa = PBXBuildFile; fileRef = 8163AC0420946BC200817111 /* Big5Freq.tab */; };
+		8163AC3820946BC300817111 /* GB2312Freq.tab in Resources */ = {isa = PBXBuildFile; fileRef = 8163AC0720946BC200817111 /* GB2312Freq.tab */; };
+		8163AC3920946BC300817111 /* nsUniversalDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC0A20946BC200817111 /* nsUniversalDetector.cpp */; };
+		8163AC3A20946BC300817111 /* nsEscCharsetProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC0B20946BC200817111 /* nsEscCharsetProber.cpp */; };
+		8163AC3B20946BC300817111 /* nsUTF8Prober.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC0D20946BC200817111 /* nsUTF8Prober.cpp */; };
+		8163AC3C20946BC300817111 /* nsEscSM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC1020946BC300817111 /* nsEscSM.cpp */; };
+		8163AC3F20946EBA00817111 /* TextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163AC3E20946EBA00817111 /* TextParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8163ABAE20945B8400817111 /* Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8163ABB120945B8400817111 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8163ABB220945B8400817111 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8163ABB420945B8400817111 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8163ABB520945B8400817111 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8163ABB820945B8400817111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8163ABBA20945B8500817111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8163ABBD20945B8500817111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8163ABBF20945B8500817111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8163ABC020945B8500817111 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8163ABC920945D4E00817111 /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		8163ABCA20945D4E00817111 /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
+		8163ABCC20945FBD00817111 /* TextFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFileManager.h; sourceTree = "<group>"; };
+		8163ABCD20945FBD00817111 /* TextFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFileManager.m; sourceTree = "<group>"; };
+		8163ABCF2094635500817111 /* FileLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileLoader.h; sourceTree = "<group>"; };
+		8163ABD02094635500817111 /* FileLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileLoader.m; sourceTree = "<group>"; };
+		8163ABD320946BC200817111 /* novel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = novel.txt; sourceTree = "<group>"; };
+		8163ABD520946BC200817111 /* nsEUCTWProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsEUCTWProber.cpp; sourceTree = "<group>"; };
+		8163ABD620946BC200817111 /* uchardet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uchardet.cpp; sourceTree = "<group>"; };
+		8163ABD720946BC200817111 /* prmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prmem.h; sourceTree = "<group>"; };
+		8163ABD820946BC200817111 /* CharDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharDistribution.h; sourceTree = "<group>"; };
+		8163ABD920946BC200817111 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		8163ABDA20946BC200817111 /* nsMBCSGroupProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsMBCSGroupProber.cpp; sourceTree = "<group>"; };
+		8163ABDB20946BC200817111 /* nsSBCSGroupProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsSBCSGroupProber.cpp; sourceTree = "<group>"; };
+		8163ABDC20946BC200817111 /* nsHebrewProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsHebrewProber.h; sourceTree = "<group>"; };
+		8163ABDD20946BC200817111 /* nsEUCKRProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsEUCKRProber.h; sourceTree = "<group>"; };
+		8163ABDE20946BC200817111 /* nsMBCSGroupProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsMBCSGroupProber.h; sourceTree = "<group>"; };
+		8163ABDF20946BC200817111 /* nsSBCharSetProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsSBCharSetProber.cpp; sourceTree = "<group>"; };
+		8163ABE020946BC200817111 /* nsBig5Prober.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsBig5Prober.cpp; sourceTree = "<group>"; };
+		8163ABE120946BC200817111 /* EUCTWFreq.tab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EUCTWFreq.tab; sourceTree = "<group>"; };
+		8163ABE220946BC200817111 /* nsEUCJPProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsEUCJPProber.h; sourceTree = "<group>"; };
+		8163ABE320946BC200817111 /* JpCntx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpCntx.h; sourceTree = "<group>"; };
+		8163ABE420946BC200817111 /* nsCodingStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsCodingStateMachine.h; sourceTree = "<group>"; };
+		8163ABE520946BC200817111 /* nsGB2312Prober.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsGB2312Prober.h; sourceTree = "<group>"; };
+		8163ABE620946BC200817111 /* nsEUCKRProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsEUCKRProber.cpp; sourceTree = "<group>"; };
+		8163ABE720946BC200817111 /* nsGB2312Prober.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsGB2312Prober.cpp; sourceTree = "<group>"; };
+		8163ABE820946BC200817111 /* nsMBCSSM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsMBCSSM.cpp; sourceTree = "<group>"; };
+		8163ABE920946BC200817111 /* nscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nscore.h; sourceTree = "<group>"; };
+		8163ABEA20946BC200817111 /* JpCntx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JpCntx.cpp; sourceTree = "<group>"; };
+		8163ABEB20946BC200817111 /* CharDistribution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CharDistribution.cpp; sourceTree = "<group>"; };
+		8163ABEC20946BC200817111 /* nsLatin1Prober.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsLatin1Prober.cpp; sourceTree = "<group>"; };
+		8163ABED20946BC200817111 /* nsEUCJPProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsEUCJPProber.cpp; sourceTree = "<group>"; };
+		8163ABEE20946BC200817111 /* nsCharSetProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsCharSetProber.h; sourceTree = "<group>"; };
+		8163ABEF20946BC200817111 /* JISFreq.tab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JISFreq.tab; sourceTree = "<group>"; };
+		8163ABF020946BC200817111 /* nsUTF8Prober.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsUTF8Prober.h; sourceTree = "<group>"; };
+		8163ABF120946BC200817111 /* nsHebrewProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsHebrewProber.cpp; sourceTree = "<group>"; };
+		8163ABF220946BC200817111 /* EUCKRFreq.tab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EUCKRFreq.tab; sourceTree = "<group>"; };
+		8163ABF320946BC200817111 /* nsSJISProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsSJISProber.cpp; sourceTree = "<group>"; };
+		8163ABF420946BC200817111 /* nsCharSetProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsCharSetProber.cpp; sourceTree = "<group>"; };
+		8163ABF620946BC200817111 /* LangHungarianModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangHungarianModel.cpp; sourceTree = "<group>"; };
+		8163ABF720946BC200817111 /* LangVietnameseModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangVietnameseModel.cpp; sourceTree = "<group>"; };
+		8163ABF820946BC200817111 /* LangBulgarianModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangBulgarianModel.cpp; sourceTree = "<group>"; };
+		8163ABF920946BC200817111 /* LangFrenchModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangFrenchModel.cpp; sourceTree = "<group>"; };
+		8163ABFA20946BC200817111 /* LangThaiModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangThaiModel.cpp; sourceTree = "<group>"; };
+		8163ABFB20946BC200817111 /* LangSpanishModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangSpanishModel.cpp; sourceTree = "<group>"; };
+		8163ABFC20946BC200817111 /* LangArabicModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangArabicModel.cpp; sourceTree = "<group>"; };
+		8163ABFD20946BC200817111 /* LangRussianModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangRussianModel.cpp; sourceTree = "<group>"; };
+		8163ABFE20946BC200817111 /* LangHebrewModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangHebrewModel.cpp; sourceTree = "<group>"; };
+		8163ABFF20946BC200817111 /* LangEsperantoModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangEsperantoModel.cpp; sourceTree = "<group>"; };
+		8163AC0020946BC200817111 /* LangTurkishModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangTurkishModel.cpp; sourceTree = "<group>"; };
+		8163AC0120946BC200817111 /* LangGermanModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangGermanModel.cpp; sourceTree = "<group>"; };
+		8163AC0220946BC200817111 /* LangGreekModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangGreekModel.cpp; sourceTree = "<group>"; };
+		8163AC0320946BC200817111 /* LangDanishModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangDanishModel.cpp; sourceTree = "<group>"; };
+		8163AC0420946BC200817111 /* Big5Freq.tab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Big5Freq.tab; sourceTree = "<group>"; };
+		8163AC0520946BC200817111 /* nsUniversalDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsUniversalDetector.h; sourceTree = "<group>"; };
+		8163AC0620946BC200817111 /* nsSBCSGroupProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsSBCSGroupProber.h; sourceTree = "<group>"; };
+		8163AC0720946BC200817111 /* GB2312Freq.tab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GB2312Freq.tab; sourceTree = "<group>"; };
+		8163AC0820946BC200817111 /* nsSBCharSetProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsSBCharSetProber.h; sourceTree = "<group>"; };
+		8163AC0920946BC200817111 /* nsPkgInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsPkgInt.h; sourceTree = "<group>"; };
+		8163AC0A20946BC200817111 /* nsUniversalDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsUniversalDetector.cpp; sourceTree = "<group>"; };
+		8163AC0B20946BC200817111 /* nsEscCharsetProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsEscCharsetProber.cpp; sourceTree = "<group>"; };
+		8163AC0C20946BC200817111 /* nsEscCharsetProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsEscCharsetProber.h; sourceTree = "<group>"; };
+		8163AC0D20946BC200817111 /* nsUTF8Prober.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsUTF8Prober.cpp; sourceTree = "<group>"; };
+		8163AC0E20946BC300817111 /* nsBig5Prober.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsBig5Prober.h; sourceTree = "<group>"; };
+		8163AC0F20946BC300817111 /* nsSJISProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsSJISProber.h; sourceTree = "<group>"; };
+		8163AC1020946BC300817111 /* nsEscSM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsEscSM.cpp; sourceTree = "<group>"; };
+		8163AC1120946BC300817111 /* nsLatin1Prober.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsLatin1Prober.h; sourceTree = "<group>"; };
+		8163AC1220946BC300817111 /* nsEUCTWProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsEUCTWProber.h; sourceTree = "<group>"; };
+		8163AC1320946BC300817111 /* uchardet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uchardet.h; sourceTree = "<group>"; };
+		8163AC3D20946EBA00817111 /* TextParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextParser.h; sourceTree = "<group>"; };
+		8163AC3E20946EBA00817111 /* TextParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8163ABAB20945B8400817111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8163ABA520945B8400817111 = {
+			isa = PBXGroup;
+			children = (
+				8163ABB020945B8400817111 /* Reader */,
+				8163ABAF20945B8400817111 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8163ABAF20945B8400817111 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8163ABAE20945B8400817111 /* Reader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8163ABB020945B8400817111 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				8163ABB120945B8400817111 /* AppDelegate.h */,
+				8163ABB220945B8400817111 /* AppDelegate.m */,
+				8163ABB420945B8400817111 /* ViewController.h */,
+				8163ABB520945B8400817111 /* ViewController.m */,
+				8163ABC920945D4E00817111 /* TextViewController.h */,
+				8163ABCA20945D4E00817111 /* TextViewController.m */,
+				8163ABCC20945FBD00817111 /* TextFileManager.h */,
+				8163ABCD20945FBD00817111 /* TextFileManager.m */,
+				8163ABCF2094635500817111 /* FileLoader.h */,
+				8163ABD02094635500817111 /* FileLoader.m */,
+				8163AC3D20946EBA00817111 /* TextParser.h */,
+				8163AC3E20946EBA00817111 /* TextParser.m */,
+				8163ABB720945B8400817111 /* Main.storyboard */,
+				8163ABD220946BC200817111 /* Resource */,
+				8163ABD420946BC200817111 /* uchardet */,
+				8163ABBA20945B8500817111 /* Assets.xcassets */,
+				8163ABBC20945B8500817111 /* LaunchScreen.storyboard */,
+				8163ABBF20945B8500817111 /* Info.plist */,
+				8163ABC020945B8500817111 /* main.m */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		8163ABD220946BC200817111 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8163ABD320946BC200817111 /* novel.txt */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8163ABD420946BC200817111 /* uchardet */ = {
+			isa = PBXGroup;
+			children = (
+				8163ABD520946BC200817111 /* nsEUCTWProber.cpp */,
+				8163ABD620946BC200817111 /* uchardet.cpp */,
+				8163ABD720946BC200817111 /* prmem.h */,
+				8163ABD820946BC200817111 /* CharDistribution.h */,
+				8163ABD920946BC200817111 /* CMakeLists.txt */,
+				8163ABDA20946BC200817111 /* nsMBCSGroupProber.cpp */,
+				8163ABDB20946BC200817111 /* nsSBCSGroupProber.cpp */,
+				8163ABDC20946BC200817111 /* nsHebrewProber.h */,
+				8163ABDD20946BC200817111 /* nsEUCKRProber.h */,
+				8163ABDE20946BC200817111 /* nsMBCSGroupProber.h */,
+				8163ABDF20946BC200817111 /* nsSBCharSetProber.cpp */,
+				8163ABE020946BC200817111 /* nsBig5Prober.cpp */,
+				8163ABE120946BC200817111 /* EUCTWFreq.tab */,
+				8163ABE220946BC200817111 /* nsEUCJPProber.h */,
+				8163ABE320946BC200817111 /* JpCntx.h */,
+				8163ABE420946BC200817111 /* nsCodingStateMachine.h */,
+				8163ABE520946BC200817111 /* nsGB2312Prober.h */,
+				8163ABE620946BC200817111 /* nsEUCKRProber.cpp */,
+				8163ABE720946BC200817111 /* nsGB2312Prober.cpp */,
+				8163ABE820946BC200817111 /* nsMBCSSM.cpp */,
+				8163ABE920946BC200817111 /* nscore.h */,
+				8163ABEA20946BC200817111 /* JpCntx.cpp */,
+				8163ABEB20946BC200817111 /* CharDistribution.cpp */,
+				8163ABEC20946BC200817111 /* nsLatin1Prober.cpp */,
+				8163ABED20946BC200817111 /* nsEUCJPProber.cpp */,
+				8163ABEE20946BC200817111 /* nsCharSetProber.h */,
+				8163ABEF20946BC200817111 /* JISFreq.tab */,
+				8163ABF020946BC200817111 /* nsUTF8Prober.h */,
+				8163ABF120946BC200817111 /* nsHebrewProber.cpp */,
+				8163ABF220946BC200817111 /* EUCKRFreq.tab */,
+				8163ABF320946BC200817111 /* nsSJISProber.cpp */,
+				8163ABF420946BC200817111 /* nsCharSetProber.cpp */,
+				8163ABF520946BC200817111 /* LangModels */,
+				8163AC0420946BC200817111 /* Big5Freq.tab */,
+				8163AC0520946BC200817111 /* nsUniversalDetector.h */,
+				8163AC0620946BC200817111 /* nsSBCSGroupProber.h */,
+				8163AC0720946BC200817111 /* GB2312Freq.tab */,
+				8163AC0820946BC200817111 /* nsSBCharSetProber.h */,
+				8163AC0920946BC200817111 /* nsPkgInt.h */,
+				8163AC0A20946BC200817111 /* nsUniversalDetector.cpp */,
+				8163AC0B20946BC200817111 /* nsEscCharsetProber.cpp */,
+				8163AC0C20946BC200817111 /* nsEscCharsetProber.h */,
+				8163AC0D20946BC200817111 /* nsUTF8Prober.cpp */,
+				8163AC0E20946BC300817111 /* nsBig5Prober.h */,
+				8163AC0F20946BC300817111 /* nsSJISProber.h */,
+				8163AC1020946BC300817111 /* nsEscSM.cpp */,
+				8163AC1120946BC300817111 /* nsLatin1Prober.h */,
+				8163AC1220946BC300817111 /* nsEUCTWProber.h */,
+				8163AC1320946BC300817111 /* uchardet.h */,
+			);
+			path = uchardet;
+			sourceTree = "<group>";
+		};
+		8163ABF520946BC200817111 /* LangModels */ = {
+			isa = PBXGroup;
+			children = (
+				8163ABF620946BC200817111 /* LangHungarianModel.cpp */,
+				8163ABF720946BC200817111 /* LangVietnameseModel.cpp */,
+				8163ABF820946BC200817111 /* LangBulgarianModel.cpp */,
+				8163ABF920946BC200817111 /* LangFrenchModel.cpp */,
+				8163ABFA20946BC200817111 /* LangThaiModel.cpp */,
+				8163ABFB20946BC200817111 /* LangSpanishModel.cpp */,
+				8163ABFC20946BC200817111 /* LangArabicModel.cpp */,
+				8163ABFD20946BC200817111 /* LangRussianModel.cpp */,
+				8163ABFE20946BC200817111 /* LangHebrewModel.cpp */,
+				8163ABFF20946BC200817111 /* LangEsperantoModel.cpp */,
+				8163AC0020946BC200817111 /* LangTurkishModel.cpp */,
+				8163AC0120946BC200817111 /* LangGermanModel.cpp */,
+				8163AC0220946BC200817111 /* LangGreekModel.cpp */,
+				8163AC0320946BC200817111 /* LangDanishModel.cpp */,
+			);
+			path = LangModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8163ABAD20945B8400817111 /* Reader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8163ABC420945B8500817111 /* Build configuration list for PBXNativeTarget "Reader" */;
+			buildPhases = (
+				8163ABAA20945B8400817111 /* Sources */,
+				8163ABAB20945B8400817111 /* Frameworks */,
+				8163ABAC20945B8400817111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reader;
+			productName = Reader;
+			productReference = 8163ABAE20945B8400817111 /* Reader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8163ABA620945B8400817111 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = xing;
+				TargetAttributes = {
+					8163ABAD20945B8400817111 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 8163ABA920945B8400817111 /* Build configuration list for PBXProject "Reader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8163ABA520945B8400817111;
+			productRefGroup = 8163ABAF20945B8400817111 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8163ABAD20945B8400817111 /* Reader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8163ABAC20945B8400817111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8163AC3820946BC300817111 /* GB2312Freq.tab in Resources */,
+				8163AC3720946BC300817111 /* Big5Freq.tab in Resources */,
+				8163ABBE20945B8500817111 /* LaunchScreen.storyboard in Resources */,
+				8163ABBB20945B8500817111 /* Assets.xcassets in Resources */,
+				8163AC2620946BC300817111 /* EUCKRFreq.tab in Resources */,
+				8163ABB920945B8400817111 /* Main.storyboard in Resources */,
+				8163AC1420946BC300817111 /* novel.txt in Resources */,
+				8163AC1C20946BC300817111 /* EUCTWFreq.tab in Resources */,
+				8163AC1720946BC300817111 /* CMakeLists.txt in Resources */,
+				8163AC2420946BC300817111 /* JISFreq.tab in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8163ABAA20945B8400817111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8163AC2D20946BC300817111 /* LangThaiModel.cpp in Sources */,
+				8163AC1D20946BC300817111 /* nsEUCKRProber.cpp in Sources */,
+				8163ABCE20945FBD00817111 /* TextFileManager.m in Sources */,
+				8163AC2020946BC300817111 /* JpCntx.cpp in Sources */,
+				8163AC2C20946BC300817111 /* LangFrenchModel.cpp in Sources */,
+				8163AC3B20946BC300817111 /* nsUTF8Prober.cpp in Sources */,
+				8163AC3420946BC300817111 /* LangGermanModel.cpp in Sources */,
+				8163AC1920946BC300817111 /* nsSBCSGroupProber.cpp in Sources */,
+				8163AC3520946BC300817111 /* LangGreekModel.cpp in Sources */,
+				8163AC2F20946BC300817111 /* LangArabicModel.cpp in Sources */,
+				8163AC1A20946BC300817111 /* nsSBCharSetProber.cpp in Sources */,
+				8163ABB620945B8400817111 /* ViewController.m in Sources */,
+				8163AC2120946BC300817111 /* CharDistribution.cpp in Sources */,
+				8163ABC120945B8500817111 /* main.m in Sources */,
+				8163AC3220946BC300817111 /* LangEsperantoModel.cpp in Sources */,
+				8163ABB320945B8400817111 /* AppDelegate.m in Sources */,
+				8163AC3C20946BC300817111 /* nsEscSM.cpp in Sources */,
+				8163AC3A20946BC300817111 /* nsEscCharsetProber.cpp in Sources */,
+				8163AC2920946BC300817111 /* LangHungarianModel.cpp in Sources */,
+				8163ABD12094635500817111 /* FileLoader.m in Sources */,
+				8163AC1F20946BC300817111 /* nsMBCSSM.cpp in Sources */,
+				8163AC3120946BC300817111 /* LangHebrewModel.cpp in Sources */,
+				8163AC2E20946BC300817111 /* LangSpanishModel.cpp in Sources */,
+				8163AC2A20946BC300817111 /* LangVietnameseModel.cpp in Sources */,
+				8163AC1B20946BC300817111 /* nsBig5Prober.cpp in Sources */,
+				8163AC1620946BC300817111 /* uchardet.cpp in Sources */,
+				8163AC3320946BC300817111 /* LangTurkishModel.cpp in Sources */,
+				8163ABCB20945D4E00817111 /* TextViewController.m in Sources */,
+				8163AC1520946BC300817111 /* nsEUCTWProber.cpp in Sources */,
+				8163AC3620946BC300817111 /* LangDanishModel.cpp in Sources */,
+				8163AC3F20946EBA00817111 /* TextParser.m in Sources */,
+				8163AC3920946BC300817111 /* nsUniversalDetector.cpp in Sources */,
+				8163AC2520946BC300817111 /* nsHebrewProber.cpp in Sources */,
+				8163AC2320946BC300817111 /* nsEUCJPProber.cpp in Sources */,
+				8163AC2B20946BC300817111 /* LangBulgarianModel.cpp in Sources */,
+				8163AC2820946BC300817111 /* nsCharSetProber.cpp in Sources */,
+				8163AC1820946BC300817111 /* nsMBCSGroupProber.cpp in Sources */,
+				8163AC1E20946BC300817111 /* nsGB2312Prober.cpp in Sources */,
+				8163AC2720946BC300817111 /* nsSJISProber.cpp in Sources */,
+				8163AC2220946BC300817111 /* nsLatin1Prober.cpp in Sources */,
+				8163AC3020946BC300817111 /* LangRussianModel.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8163ABB720945B8400817111 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8163ABB820945B8400817111 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8163ABBC20945B8500817111 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8163ABBD20945B8500817111 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8163ABC220945B8500817111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8163ABC320945B8500817111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8163ABC520945B8500817111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Reader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xing.Reader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8163ABC620945B8500817111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Reader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xing.Reader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8163ABA920945B8400817111 /* Build configuration list for PBXProject "Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8163ABC220945B8500817111 /* Debug */,
+				8163ABC320945B8500817111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8163ABC420945B8500817111 /* Build configuration list for PBXNativeTarget "Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8163ABC520945B8500817111 /* Debug */,
+				8163ABC620945B8500817111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8163ABA620945B8400817111 /* Project object */;
+}
