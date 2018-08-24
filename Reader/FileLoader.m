@@ -83,37 +83,9 @@ static NSUInteger kStreamBlockSize = (20 * 1024);
             NSUInteger length = 0;
             length = [self.inputStream read:buffer maxLength:kStreamBlockSize];
             
-            if (length) {
-                
-                
+            if (length != 0) {
                 NSData *data = [NSData dataWithBytes:(const void *)buffer length:length];
-                NSString *string = nil;
-                BOOL isLossy;
-                
-                NSDictionary *options = nil;
-//                if (self.encoding != 0) {
-//                    options = @{NSStringEncodingDetectionSuggestedEncodingsKey: @[[NSNumber numberWithUnsignedInteger:self.encoding]]};
-//                }
-                
-                data = [@"12s我啊大xcfvghjn" dataUsingEncoding:NSUTF8StringEncoding];
-                
-                NSDate *date = [NSDate date];
-                
-                
-                
-                
-                NSStringEncoding encoding = [NSString stringEncodingForData:data
-                                                            encodingOptions:options
-                                                            convertedString:&string
-                                                        usedLossyConversion:&isLossy];
-                
-                NSLog(@"%f", [[NSDate date] timeIntervalSinceDate:date]);
-                if (encoding != 0) {
-                    self.encoding = encoding;
-                }
-                
-                
-//                NSLog(@"%lld", encoding);
+                [self stringEncodingForData:data];
             }
         }
             break;
@@ -124,6 +96,28 @@ static NSUInteger kStreamBlockSize = (20 * 1024);
             break;
         default:
             break;
+    }
+}
+
+- (void)stringEncodingForData:(NSData *)data
+{
+    NSString *string = nil;
+    
+    if (self.encoding != 0) {
+        
+        
+    } else {
+        
+        BOOL isLossy = NO;
+        
+        NSDictionary *options = nil;
+        NSStringEncoding encoding = [NSString stringEncodingForData:data
+                                                    encodingOptions:options
+                                                    convertedString:&string
+                                                usedLossyConversion:&isLossy];
+        if (encoding != 0) {
+            self.encoding = encoding;
+        }
     }
 }
 

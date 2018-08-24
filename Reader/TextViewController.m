@@ -31,10 +31,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.loader = [[FileLoader alloc] initWithURL:self.url];
-    [self.loader loadFileUserBlock:^(NSString *content, BOOL finished) {
-        
-    }];
+    
+    
+//    self.loader = [[FileLoader alloc] initWithURL:self.url];
+//    [self.loader loadFileUserBlock:^(NSString *content, BOOL finished) {
+//
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TextViewController.h"
+#import "FileManager.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -33,8 +34,8 @@
 
 - (void)loadFiles
 {
-    NSArray *urls = [[NSBundle mainBundle] URLsForResourcesWithExtension:@"txt" subdirectory:nil];
-    [_files addObjectsFromArray:urls];
+    NSArray *filePaths = [[FileManager sharedManager] allFiles];
+    [_files addObjectsFromArray:filePaths];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -45,8 +46,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fileCell"];
-    NSURL *url = [self.files objectAtIndex:indexPath.row];
-    cell.textLabel.text = url.resourceSpecifier;
+    NSString *filePath = [self.files objectAtIndex:indexPath.row];
+    NSString *name = filePath.lastPathComponent;
+    cell.textLabel.text = [name stringByRemovingPercentEncoding];
     return cell;
 }
 
@@ -54,6 +56,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSURL *url = [self.files objectAtIndex:indexPath.row];
+    
     TextViewController *vc = [[TextViewController alloc] initWithURL:url];
     [self.navigationController pushViewController:vc animated:YES];
 }
