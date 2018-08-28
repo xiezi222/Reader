@@ -27,17 +27,20 @@
 
 - (NSArray *)allFiles
 {
-    NSString *docuPath = [FileManager documentPath];
-
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"a" ofType:@"txt"];
-//    NSData *data = [NSData dataWithContentsOfFile:path];
-//    [data writeToFile:[docuPath stringByAppendingPathComponent:@"a.txt"] atomically:YES];
-
+    NSString *documentPath = [FileManager documentPath];
     NSError *error;
-        // 获取指定路径对应文件夹下的所有文件
-    NSArray <NSString *> *fileArray = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:docuPath error:&error];
-    NSLog(@"%s_%@", __FUNCTION__, error);
-    return fileArray;
+    NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentPath error:&error];
+
+    if (error) {
+        NSLog(@"%s_%@", __FUNCTION__, error);
+    }
+
+    NSMutableArray *paths = [NSMutableArray arrayWithCapacity:0];
+    for (NSString *item in contents) {
+        NSString *path = [documentPath stringByAppendingPathComponent:item];
+        [paths addObject:path];
+    }
+    return paths;
 }
 
 

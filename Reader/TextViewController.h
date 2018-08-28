@@ -10,6 +10,6 @@
 
 @interface TextViewController : UIViewController
 
-- (instancetype)initWithURL:(NSURL *)url;
+- (instancetype)initWithPath:(NSString *)path;
 
 @end

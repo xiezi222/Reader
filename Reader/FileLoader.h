@@ -8,11 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol FileLoaderDelegate <NSObject>
+
+- (void)fileLoaderDidLoadString:(NSString *)string;
+
+@end
+
 @interface FileLoader : NSObject
 
-- (instancetype)initWithURL:(NSURL *)url;
+- (instancetype)initWithPath:(NSString *)path;
 
-- (void)loadFileUserBlock:(void (^)(NSString *content, BOOL finished))block;
+- (void)load;
 - (void)cancel;
 
 @end

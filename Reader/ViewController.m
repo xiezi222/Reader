@@ -55,9 +55,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSURL *url = [self.files objectAtIndex:indexPath.row];
+    NSString *path = [self.files objectAtIndex:indexPath.row];
     
-    TextViewController *vc = [[TextViewController alloc] initWithURL:url];
+    TextViewController *vc = [[TextViewController alloc] initWithPath:path];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

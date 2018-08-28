@@ -11,18 +11,18 @@
 
 @interface TextViewController ()
 
-@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) FileLoader *loader;
 
 @end
 
 @implementation TextViewController
 
-- (instancetype)initWithURL:(NSURL *)url
+- (instancetype)initWithPath:(NSString *)path
 {
     self = [super init];
     if (self) {
-        self.url = url;
+        self.path = path;
     }
     return self;
 }
@@ -31,12 +31,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    
-//    self.loader = [[FileLoader alloc] initWithURL:self.url];
-//    [self.loader loadFileUserBlock:^(NSString *content, BOOL finished) {
-//
-//    }];
+    self.loader = [[FileLoader alloc] initWithPath:self.path];
+    [self.loader load];
 }
 
 - (void)didReceiveMemoryWarning {

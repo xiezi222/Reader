@@ -7,55 +7,50 @@
 //
 
 #import "FileLoader.h"
+#import "FileInfo.h"
 
 static NSUInteger kStreamBlockSize = (20 * 1024);
 
 @interface FileLoader () <NSStreamDelegate>
 
-@property (nonatomic, copy) id block;
-@property (nonatomic, strong) NSURL *url;
-
+@property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) NSInputStream *inputStream;
-@property (nonatomic, assign, getter=isLoading) BOOL loading;
-
 @property (nonatomic, assign) NSStringEncoding encoding;
+
+@property (nonatomic, strong) NSMutableData *surplusData;
 
 @end;
 
 @implementation FileLoader
 
-- (instancetype)initWithURL:(NSURL *)url
+- (instancetype)initWithPath:(NSString *)path
 {
     self = [super init];
     if (self) {
-        self.url = url;
+        self.path = path;
     }
     return self;
 }
 
-- (NSInputStream *)inputStream {
+- (NSInputStream *)inputStream
+{
     if (!_inputStream) {
-        
-        NSString *path = self.url.path;
-        _inputStream = [[NSInputStream alloc] initWithFileAtPath:path];
+        _inputStream = [[NSInputStream alloc] initWithFileAtPath:self.path];
         _inputStream.delegate = self;
     }
     return _inputStream;
 }
 
-- (void)loadFileUserBlock:(void (^)(NSString *content, BOOL finished))block;
+- (void)load
 {
-    if (![self.url isFileURL]) {
-        return;
-    }
-    
-    if (self.isLoading) {
-        return;
-    }
-    self.loading = YES;
-    
     dispatch_queue_t queue = dispatch_queue_create("com.queue.fileLoader", DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
+
+        self.encoding = [FileInfo encodingForTextFile:self.path];
+        if (self.encoding == 0) {
+            return;
+        }
+
         NSRunLoop *currentRunLoop = [NSRunLoop currentRunLoop];
         [self.inputStream scheduleInRunLoop:currentRunLoop forMode:NSRunLoopCommonModes];
         [self.inputStream open];
@@ -64,12 +59,7 @@ static NSUInteger kStreamBlockSize = (20 * 1024);
 }
 
 - (void)cancel {
-    if (!self.isLoading) {
-        return;
-    }
-    self.loading = NO;
     [self.inputStream close];
-    _inputStream = nil;
 }
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode {
@@ -85,7 +75,7 @@ static NSUInteger kStreamBlockSize = (20 * 1024);
             
             if (length != 0) {
                 NSData *data = [NSData dataWithBytes:(const void *)buffer length:length];
-                [self stringEncodingForData:data];
+                [self stringEncodingForData:data surplusLegth:0];
             }
         }
             break;
@@ -99,26 +89,34 @@ static NSUInteger kStreamBlockSize = (20 * 1024);
     }
 }
 
-- (void)stringEncodingForData:(NSData *)data
+- (NSString *)stringEncodingForData:(NSData *)data surplusLegth:(NSInteger)length
 {
-    NSString *string = nil;
-    
-    if (self.encoding != 0) {
-        
-        
-    } else {
-        
-        BOOL isLossy = NO;
-        
-        NSDictionary *options = nil;
-        NSStringEncoding encoding = [NSString stringEncodingForData:data
-                                                    encodingOptions:options
-                                                    convertedString:&string
-                                                usedLossyConversion:&isLossy];
-        if (encoding != 0) {
-            self.encoding = encoding;
-        }
+    //加载上次解析多出的data
+    if (self.surplusData.length) {
+        [self.surplusData appendData:data];
+        data = self.surplusData;
+        self.surplusData = nil;
     }
+
+    //这次解析要用的data
+    NSData *subData = [data subdataWithRange:NSMakeRange(0, data.length -length)];
+
+    NSString *string = [[NSString alloc] initWithData:subData encoding:self.encoding];
+    if (string == nil) { //解析失败，重新计算data
+
+        if (length >= 4) {//多次解析无果，放弃
+            NSLog(@"多次解析无果，放弃");
+            self.surplusData = nil;
+            return @"";
+        }
+        return [self stringEncodingForData:data surplusLegth:length + 1];
+    }
+    if (length) {
+        NSInteger location = data.length -length;
+        NSRange range = NSMakeRange(location, length);
+        self.surplusData = [NSMutableData dataWithData:[data subdataWithRange:range]];
+    }
+    return string;
 }
 
 @end
