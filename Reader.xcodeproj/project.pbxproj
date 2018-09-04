@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		81022EBF21301B2200B1A87C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81022EBE21301B2200B1A87C /* FileManager.m */; };
+		81050DA3213CDEA800A0E00E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818434FA213023A90041442D /* CoreFoundation.framework */; };
+		81050DA8213CE17400A0E00E /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81050DA5213CE14600A0E00E /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81050DA9213CE1A800A0E00E /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81050DA5213CE14600A0E00E /* FMDB.framework */; };
+		81050DAD213D461500A0E00E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 81050DAB213D461500A0E00E /* MBProgressHUD.m */; };
+		81050DB2213D49A100A0E00E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81050DB1213D49A100A0E00E /* CoreGraphics.framework */; };
+		81050DB4213D49BC00A0E00E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81050DB3213D49BC00A0E00E /* QuartzCore.framework */; };
+		81050DB7213D4B9300A0E00E /* BookHistoryTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 81050DB6213D4B9300A0E00E /* BookHistoryTable.m */; };
+		81050DB9213D620200A0E00E /* 最强特种兵之龙刺.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81050DB8213D620200A0E00E /* 最强特种兵之龙刺.txt */; };
 		8163ABB320945B8400817111 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABB220945B8400817111 /* AppDelegate.m */; };
 		8163ABB620945B8400817111 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABB520945B8400817111 /* ViewController.m */; };
 		8163ABB920945B8400817111 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABB720945B8400817111 /* Main.storyboard */; };
@@ -15,7 +23,12 @@
 		8163ABBE20945B8500817111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8163ABBC20945B8500817111 /* LaunchScreen.storyboard */; };
 		8163ABC120945B8500817111 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABC020945B8500817111 /* main.m */; };
 		8163ABCB20945D4E00817111 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABCA20945D4E00817111 /* TextViewController.m */; };
-		8163ABD12094635500817111 /* FileLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABD02094635500817111 /* FileLoader.m */; };
+		8163ABD12094635500817111 /* FileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8163ABD02094635500817111 /* FileParser.m */; };
+		81678B65213A95E500234BA4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F5CD63213A940F001A9719 /* libsqlite3.tbd */; };
+		81678B6B213AA3BE00234BA4 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81678B6A213AA3BE00234BA4 /* DatabaseManager.m */; };
+		81678B6E213AA57000234BA4 /* BookChapterTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 81678B6D213AA57000234BA4 /* BookChapterTable.m */; };
+		81678B74213AB0AB00234BA4 /* BaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 81678B73213AB0AB00234BA4 /* BaseTable.m */; };
+		816E55A0213E6B31009FF16F /* ChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816E559F213E6B31009FF16F /* ChapterViewController.m */; };
 		81823163212EC76D00C431ED /* FileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 81823162212EC76D00C431ED /* FileInfo.m */; };
 		8184353E213025200041442D /* nsEUCTWProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 818434FF213025200041442D /* nsEUCTWProber.cpp */; };
 		8184353F213025200041442D /* uchardet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81843500213025200041442D /* uchardet.cpp */; };
@@ -57,15 +70,39 @@
 		81843563213025200041442D /* nsEscCharsetProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81843535213025200041442D /* nsEscCharsetProber.cpp */; };
 		81843564213025200041442D /* nsUTF8Prober.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81843537213025200041442D /* nsUTF8Prober.cpp */; };
 		81843565213025200041442D /* nsEscSM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8184353A213025200041442D /* nsEscSM.cpp */; };
-		81843566213026400041442D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818434FA213023A90041442D /* CoreFoundation.framework */; };
 		81843567213026400041442D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818434FB213023A90041442D /* Foundation.framework */; };
 		81843569213026450041442D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81843568213026450041442D /* UIKit.framework */; };
 		8184356B213034880041442D /* a.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8184356A213034880041442D /* a.txt */; };
+		81FA43082135299C00985891 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FA43072135299C00985891 /* Book.m */; };
+		81FA430B21352AE900985891 /* BookChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FA430A21352AE900985891 /* BookChapter.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81678B71213AA7D000234BA4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				81050DA8213CE17400A0E00E /* FMDB.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		81022EBD21301B2200B1A87C /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		81022EBE21301B2200B1A87C /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		81050DA5213CE14600A0E00E /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
+		81050DAB213D461500A0E00E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		81050DAC213D461500A0E00E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		81050DAE213D497200A0E00E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		81050DB1213D49A100A0E00E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		81050DB3213D49BC00A0E00E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		81050DB5213D4B9300A0E00E /* BookHistoryTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookHistoryTable.h; sourceTree = "<group>"; };
+		81050DB6213D4B9300A0E00E /* BookHistoryTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookHistoryTable.m; sourceTree = "<group>"; };
+		81050DB8213D620200A0E00E /* 最强特种兵之龙刺.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "最强特种兵之龙刺.txt"; sourceTree = "<group>"; };
 		8106F9F6209C77FA006C8DCE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8163ABAE20945B8400817111 /* Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8163ABB120945B8400817111 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,8 +116,16 @@
 		8163ABC020945B8500817111 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8163ABC920945D4E00817111 /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		8163ABCA20945D4E00817111 /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
-		8163ABCF2094635500817111 /* FileLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileLoader.h; sourceTree = "<group>"; };
-		8163ABD02094635500817111 /* FileLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileLoader.m; sourceTree = "<group>"; };
+		8163ABCF2094635500817111 /* FileParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileParser.h; sourceTree = "<group>"; };
+		8163ABD02094635500817111 /* FileParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileParser.m; sourceTree = "<group>"; };
+		81678B69213AA3BE00234BA4 /* DatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		81678B6A213AA3BE00234BA4 /* DatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
+		81678B6C213AA57000234BA4 /* BookChapterTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookChapterTable.h; sourceTree = "<group>"; };
+		81678B6D213AA57000234BA4 /* BookChapterTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookChapterTable.m; sourceTree = "<group>"; };
+		81678B72213AB0AB00234BA4 /* BaseTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTable.h; sourceTree = "<group>"; };
+		81678B73213AB0AB00234BA4 /* BaseTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTable.m; sourceTree = "<group>"; };
+		816E559E213E6B31009FF16F /* ChapterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterViewController.h; sourceTree = "<group>"; };
+		816E559F213E6B31009FF16F /* ChapterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterViewController.m; sourceTree = "<group>"; };
 		81823161212EC76D00C431ED /* FileInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileInfo.h; sourceTree = "<group>"; };
 		81823162212EC76D00C431ED /* FileInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileInfo.m; sourceTree = "<group>"; };
 		818434FA213023A90041442D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -149,6 +194,12 @@
 		8184353D213025200041442D /* uchardet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uchardet.h; sourceTree = "<group>"; };
 		81843568213026450041442D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8184356A213034880041442D /* a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a.txt; sourceTree = "<group>"; };
+		81F5CD63213A940F001A9719 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		81F5CD65213A942A001A9719 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		81FA43062135299C00985891 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		81FA43072135299C00985891 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		81FA430921352AE900985891 /* BookChapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookChapter.h; sourceTree = "<group>"; };
+		81FA430A21352AE900985891 /* BookChapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookChapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,9 +207,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81050DB4213D49BC00A0E00E /* QuartzCore.framework in Frameworks */,
+				81050DB2213D49A100A0E00E /* CoreGraphics.framework in Frameworks */,
+				81050DA9213CE1A800A0E00E /* FMDB.framework in Frameworks */,
+				81678B65213A95E500234BA4 /* libsqlite3.tbd in Frameworks */,
 				81843569213026450041442D /* UIKit.framework in Frameworks */,
-				81843566213026400041442D /* CoreFoundation.framework in Frameworks */,
 				81843567213026400041442D /* Foundation.framework in Frameworks */,
+				81050DA3213CDEA800A0E00E /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,9 +223,28 @@
 		81022EB62130160B00B1A87C /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				81050DAA213D461500A0E00E /* MBProgressHUD */,
+				81050DA4213CE14600A0E00E /* fmdb */,
 				818434FE213025200041442D /* uchardet */,
 			);
 			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		81050DA4213CE14600A0E00E /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				81050DA5213CE14600A0E00E /* FMDB.framework */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		81050DAA213D461500A0E00E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				81050DAB213D461500A0E00E /* MBProgressHUD.m */,
+				81050DAC213D461500A0E00E /* MBProgressHUD.h */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		8163ABA520945B8400817111 = {
@@ -199,27 +273,70 @@
 				8163ABB520945B8400817111 /* ViewController.m */,
 				8163ABC920945D4E00817111 /* TextViewController.h */,
 				8163ABCA20945D4E00817111 /* TextViewController.m */,
-				81022EBD21301B2200B1A87C /* FileManager.h */,
-				81022EBE21301B2200B1A87C /* FileManager.m */,
-				81823161212EC76D00C431ED /* FileInfo.h */,
-				81823162212EC76D00C431ED /* FileInfo.m */,
-				8163ABCF2094635500817111 /* FileLoader.h */,
-				8163ABD02094635500817111 /* FileLoader.m */,
-				8163ABB720945B8400817111 /* Main.storyboard */,
+				816E559E213E6B31009FF16F /* ChapterViewController.h */,
+				816E559F213E6B31009FF16F /* ChapterViewController.m */,
+				8106F9F6209C77FA006C8DCE /* PrefixHeader.pch */,
+				816E559D213E3412009FF16F /* File */,
+				816E559C213E33FD009FF16F /* Database */,
 				81022EB62130160B00B1A87C /* ThirdParty */,
-				8163ABBA20945B8500817111 /* Assets.xcassets */,
 				81BE4CAC209FF46000036103 /* Resource */,
+				8163ABBA20945B8500817111 /* Assets.xcassets */,
+				8163ABB720945B8400817111 /* Main.storyboard */,
 				8163ABBC20945B8500817111 /* LaunchScreen.storyboard */,
 				8163ABBF20945B8500817111 /* Info.plist */,
-				8106F9F6209C77FA006C8DCE /* PrefixHeader.pch */,
 				8163ABC020945B8500817111 /* main.m */,
 			);
 			path = Reader;
 			sourceTree = "<group>";
 		};
+		816E559C213E33FD009FF16F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				81678B69213AA3BE00234BA4 /* DatabaseManager.h */,
+				81678B6A213AA3BE00234BA4 /* DatabaseManager.m */,
+				816E55A1213E7D28009FF16F /* Tables */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		816E559D213E3412009FF16F /* File */ = {
+			isa = PBXGroup;
+			children = (
+				81022EBD21301B2200B1A87C /* FileManager.h */,
+				81022EBE21301B2200B1A87C /* FileManager.m */,
+				8163ABCF2094635500817111 /* FileParser.h */,
+				8163ABD02094635500817111 /* FileParser.m */,
+				81FA43062135299C00985891 /* Book.h */,
+				81FA43072135299C00985891 /* Book.m */,
+				81FA430921352AE900985891 /* BookChapter.h */,
+				81FA430A21352AE900985891 /* BookChapter.m */,
+				81823161212EC76D00C431ED /* FileInfo.h */,
+				81823162212EC76D00C431ED /* FileInfo.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		816E55A1213E7D28009FF16F /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				81678B72213AB0AB00234BA4 /* BaseTable.h */,
+				81678B73213AB0AB00234BA4 /* BaseTable.m */,
+				81678B6C213AA57000234BA4 /* BookChapterTable.h */,
+				81678B6D213AA57000234BA4 /* BookChapterTable.m */,
+				81050DB5213D4B9300A0E00E /* BookHistoryTable.h */,
+				81050DB6213D4B9300A0E00E /* BookHistoryTable.m */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
 		818434F9213023A90041442D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81050DB3213D49BC00A0E00E /* QuartzCore.framework */,
+				81050DB1213D49A100A0E00E /* CoreGraphics.framework */,
+				81050DAE213D497200A0E00E /* CoreText.framework */,
+				81F5CD65213A942A001A9719 /* libsqlite3.0.tbd */,
+				81F5CD63213A940F001A9719 /* libsqlite3.tbd */,
 				81843568213026450041442D /* UIKit.framework */,
 				818434FA213023A90041442D /* CoreFoundation.framework */,
 				818434FB213023A90041442D /* Foundation.framework */,
@@ -308,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				8184356A213034880041442D /* a.txt */,
+				81050DB8213D620200A0E00E /* 最强特种兵之龙刺.txt */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -322,6 +440,7 @@
 				8163ABAA20945B8400817111 /* Sources */,
 				8163ABAB20945B8400817111 /* Frameworks */,
 				8163ABAC20945B8400817111 /* Resources */,
+				81678B71213AA7D000234BA4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +496,7 @@
 				81843560213025200041442D /* Big5Freq.tab in Resources */,
 				81843540213025200041442D /* CMakeLists.txt in Resources */,
 				8163ABBB20945B8500817111 /* Assets.xcassets in Resources */,
+				81050DB9213D620200A0E00E /* 最强特种兵之龙刺.txt in Resources */,
 				8184354D213025200041442D /* JISFreq.tab in Resources */,
 				8163ABB920945B8400817111 /* Main.storyboard in Resources */,
 			);
@@ -394,17 +514,23 @@
 				8163ABC120945B8500817111 /* main.m in Sources */,
 				81843557213025200041442D /* LangSpanishModel.cpp in Sources */,
 				81843548213025200041442D /* nsMBCSSM.cpp in Sources */,
+				81678B74213AB0AB00234BA4 /* BaseTable.m in Sources */,
 				81843558213025200041442D /* LangArabicModel.cpp in Sources */,
+				81050DAD213D461500A0E00E /* MBProgressHUD.m in Sources */,
 				8184354C213025200041442D /* nsEUCJPProber.cpp in Sources */,
 				8184353F213025200041442D /* uchardet.cpp in Sources */,
+				81678B6B213AA3BE00234BA4 /* DatabaseManager.m in Sources */,
+				816E55A0213E6B31009FF16F /* ChapterViewController.m in Sources */,
 				8184354B213025200041442D /* nsLatin1Prober.cpp in Sources */,
 				81843553213025200041442D /* LangVietnameseModel.cpp in Sources */,
 				8184355F213025200041442D /* LangDanishModel.cpp in Sources */,
 				81843564213025200041442D /* nsUTF8Prober.cpp in Sources */,
+				81678B6E213AA57000234BA4 /* BookChapterTable.m in Sources */,
 				8184354E213025200041442D /* nsHebrewProber.cpp in Sources */,
 				81843542213025200041442D /* nsSBCSGroupProber.cpp in Sources */,
 				81843543213025200041442D /* nsSBCharSetProber.cpp in Sources */,
 				8184354A213025200041442D /* CharDistribution.cpp in Sources */,
+				81FA43082135299C00985891 /* Book.m in Sources */,
 				81843559213025200041442D /* LangRussianModel.cpp in Sources */,
 				81843550213025200041442D /* nsSJISProber.cpp in Sources */,
 				81843554213025200041442D /* LangBulgarianModel.cpp in Sources */,
@@ -414,10 +540,12 @@
 				8163ABB320945B8400817111 /* AppDelegate.m in Sources */,
 				8184355C213025200041442D /* LangTurkishModel.cpp in Sources */,
 				8184355A213025200041442D /* LangHebrewModel.cpp in Sources */,
-				8163ABD12094635500817111 /* FileLoader.m in Sources */,
+				8163ABD12094635500817111 /* FileParser.m in Sources */,
 				81843562213025200041442D /* nsUniversalDetector.cpp in Sources */,
 				81843544213025200041442D /* nsBig5Prober.cpp in Sources */,
 				8184355E213025200041442D /* LangGreekModel.cpp in Sources */,
+				81050DB7213D4B9300A0E00E /* BookHistoryTable.m in Sources */,
+				81FA430B21352AE900985891 /* BookChapter.m in Sources */,
 				81843551213025200041442D /* nsCharSetProber.cpp in Sources */,
 				81823163212EC76D00C431ED /* FileInfo.m in Sources */,
 				81843563213025200041442D /* nsEscCharsetProber.cpp in Sources */,
@@ -506,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -558,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -572,19 +700,22 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NSA286TD97;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/Reader/ThirdParty/fmdb",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ./Reader/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Reader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Reader/ThirdParty/libuchardet-ios",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xing.Reader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,19 +729,22 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NSA286TD97;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/Reader/ThirdParty/fmdb",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ./Reader/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Reader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Reader/ThirdParty/libuchardet-ios",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xing.Reader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
