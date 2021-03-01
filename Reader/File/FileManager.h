@@ -12,6 +12,8 @@
 
 + (instancetype)sharedManager;
 
-- (NSArray *)allFiles;
+- (NSArray *)allOriginalFilePaths;
+- (void)loadFileWithPath:(NSString *)path complection:(void(^)())complection;
+
 
 @end

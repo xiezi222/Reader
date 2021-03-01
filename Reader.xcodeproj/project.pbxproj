@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21AB72072564F9130095FB4F /* FileParserHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AB72062564F9130095FB4F /* FileParserHandler.m */; };
+		21AB720B2565009F0095FB4F /* uchardet in Resources */ = {isa = PBXBuildFile; fileRef = 21AB720A2565009F0095FB4F /* uchardet */; };
 		81022EBF21301B2200B1A87C /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81022EBE21301B2200B1A87C /* FileManager.m */; };
 		81050DA3213CDEA800A0E00E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818434FA213023A90041442D /* CoreFoundation.framework */; };
 		81050DA8213CE17400A0E00E /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81050DA5213CE14600A0E00E /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -29,7 +31,7 @@
 		81678B6E213AA57000234BA4 /* BookChapterTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 81678B6D213AA57000234BA4 /* BookChapterTable.m */; };
 		81678B74213AB0AB00234BA4 /* BaseTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 81678B73213AB0AB00234BA4 /* BaseTable.m */; };
 		816E55A0213E6B31009FF16F /* ChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816E559F213E6B31009FF16F /* ChapterViewController.m */; };
-		81823163212EC76D00C431ED /* FileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 81823162212EC76D00C431ED /* FileInfo.m */; };
+		81823163212EC76D00C431ED /* FileUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81823162212EC76D00C431ED /* FileUtils.mm */; };
 		8184353E213025200041442D /* nsEUCTWProber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 818434FF213025200041442D /* nsEUCTWProber.cpp */; };
 		8184353F213025200041442D /* uchardet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81843500213025200041442D /* uchardet.cpp */; };
 		81843540213025200041442D /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81843503213025200041442D /* CMakeLists.txt */; };
@@ -92,6 +94,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21AB72052564F9130095FB4F /* FileParserHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileParserHandler.h; sourceTree = "<group>"; };
+		21AB72062564F9130095FB4F /* FileParserHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileParserHandler.m; sourceTree = "<group>"; };
+		21AB720A2565009F0095FB4F /* uchardet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = uchardet; sourceTree = "<group>"; };
 		81022EBD21301B2200B1A87C /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		81022EBE21301B2200B1A87C /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		81050DA5213CE14600A0E00E /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
@@ -126,8 +131,8 @@
 		81678B73213AB0AB00234BA4 /* BaseTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTable.m; sourceTree = "<group>"; };
 		816E559E213E6B31009FF16F /* ChapterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChapterViewController.h; sourceTree = "<group>"; };
 		816E559F213E6B31009FF16F /* ChapterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChapterViewController.m; sourceTree = "<group>"; };
-		81823161212EC76D00C431ED /* FileInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileInfo.h; sourceTree = "<group>"; };
-		81823162212EC76D00C431ED /* FileInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileInfo.m; sourceTree = "<group>"; };
+		81823161212EC76D00C431ED /* FileUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		81823162212EC76D00C431ED /* FileUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FileUtils.mm; sourceTree = "<group>"; };
 		818434FA213023A90041442D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		818434FB213023A90041442D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		818434FF213025200041442D /* nsEUCTWProber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = nsEUCTWProber.cpp; sourceTree = "<group>"; };
@@ -304,14 +309,16 @@
 			children = (
 				81022EBD21301B2200B1A87C /* FileManager.h */,
 				81022EBE21301B2200B1A87C /* FileManager.m */,
+				21AB72052564F9130095FB4F /* FileParserHandler.h */,
+				21AB72062564F9130095FB4F /* FileParserHandler.m */,
 				8163ABCF2094635500817111 /* FileParser.h */,
 				8163ABD02094635500817111 /* FileParser.m */,
 				81FA43062135299C00985891 /* Book.h */,
 				81FA43072135299C00985891 /* Book.m */,
 				81FA430921352AE900985891 /* BookChapter.h */,
 				81FA430A21352AE900985891 /* BookChapter.m */,
-				81823161212EC76D00C431ED /* FileInfo.h */,
-				81823162212EC76D00C431ED /* FileInfo.m */,
+				81823161212EC76D00C431ED /* FileUtils.h */,
+				81823162212EC76D00C431ED /* FileUtils.mm */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -424,6 +431,7 @@
 		81BE4CAC209FF46000036103 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				21AB720A2565009F0095FB4F /* uchardet */,
 				8184356A213034880041442D /* a.txt */,
 				81050DB8213D620200A0E00E /* 最强特种兵之龙刺.txt */,
 			);
@@ -457,7 +465,7 @@
 		8163ABA620945B8400817111 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = xing;
 				TargetAttributes = {
 					8163ABAD20945B8400817111 = {
@@ -488,6 +496,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AB720B2565009F0095FB4F /* uchardet in Resources */,
 				8184356B213034880041442D /* a.txt in Resources */,
 				8163ABBE20945B8500817111 /* LaunchScreen.storyboard in Resources */,
 				81843561213025200041442D /* GB2312Freq.tab in Resources */,
@@ -528,6 +537,7 @@
 				81678B6E213AA57000234BA4 /* BookChapterTable.m in Sources */,
 				8184354E213025200041442D /* nsHebrewProber.cpp in Sources */,
 				81843542213025200041442D /* nsSBCSGroupProber.cpp in Sources */,
+				21AB72072564F9130095FB4F /* FileParserHandler.m in Sources */,
 				81843543213025200041442D /* nsSBCharSetProber.cpp in Sources */,
 				8184354A213025200041442D /* CharDistribution.cpp in Sources */,
 				81FA43082135299C00985891 /* Book.m in Sources */,
@@ -547,7 +557,7 @@
 				81050DB7213D4B9300A0E00E /* BookHistoryTable.m in Sources */,
 				81FA430B21352AE900985891 /* BookChapter.m in Sources */,
 				81843551213025200041442D /* nsCharSetProber.cpp in Sources */,
-				81823163212EC76D00C431ED /* FileInfo.m in Sources */,
+				81823163212EC76D00C431ED /* FileUtils.mm in Sources */,
 				81843563213025200041442D /* nsEscCharsetProber.cpp in Sources */,
 				8184353E213025200041442D /* nsEUCTWProber.cpp in Sources */,
 				8184355B213025200041442D /* LangEsperantoModel.cpp in Sources */,
@@ -609,6 +619,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -634,7 +645,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -667,6 +678,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -686,7 +698,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

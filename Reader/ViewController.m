@@ -24,18 +24,23 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _files = [NSMutableArray array];
-    [self loadFiles];
+    [self reloadFiles];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)refresh:(id)sender {
+    [self reloadFiles];
+}
 
-- (void)loadFiles
+- (void)reloadFiles
 {
-    NSArray *filePaths = [[FileManager sharedManager] allFiles];
+    NSArray *filePaths = [[FileManager sharedManager] allOriginalFilePaths];
+    [_files removeAllObjects];
     [_files addObjectsFromArray:filePaths];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

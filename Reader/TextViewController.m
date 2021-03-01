@@ -23,11 +23,6 @@
 
 @implementation TextViewController
 
-- (void)dealloc
-{
-    NSLog(@"TextViewController dealloc");
-}
-
 - (instancetype)initWithPath:(NSString *)path
 {
     self = [super init];

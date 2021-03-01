@@ -1,5 +1,5 @@
 //
-//  FileInfo.m
+//  FileUtils.m
 //  Reader
 //
 //  Created by xing on 2018/8/23.
@@ -25,10 +25,10 @@
 */
 
 
-#import "FileInfo.h"
+#import "FileUtils.h"
 #import "uchardet.h"
 
-@implementation FileInfo
+@implementation FileUtils
 
 + (NSDictionary *)fileTypeMap
 {
@@ -68,14 +68,22 @@
              };
 }
 
-+ (NSString *)fileTypeFromPath:(NSString *)filePath
-{
-    NSFileManager *manager = [NSFileManager defaultManager];
-    if (![manager fileExistsAtPath:filePath]) {
-        return @"";
++ (BOOL)isValidPath:(NSString *)path {
+    BOOL isDirectory = NO;
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory] || isDirectory) {
+        return NO;
     }
+    return YES;
+}
 
-    NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:filePath];
++ (NSString *)fileTypeWithPath:(NSString *)path {
+    
+    if (![FileUtils isValidPath:path]) return nil;
+    
+    NSString *extension = [path pathExtension];
+    if (extension.length) return extension;
+    
+    NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:path];
     [handle seekToFileOffset:0];
     NSData *headData = [handle readDataOfLength:32];
     [handle closeFile];
@@ -87,7 +95,7 @@
         fileHeader = [fileHeader stringByAppendingString:s];
     }
 
-    NSDictionary *fileTypeMap = [FileInfo fileTypeMap];
+    NSDictionary *fileTypeMap = [FileUtils fileTypeMap];
     fileHeader = [fileHeader uppercaseString];
 
     for (NSString *key in fileTypeMap.allKeys) {
@@ -95,28 +103,19 @@
             return [fileTypeMap objectForKey:key];
         }
     }
-
-    if ([filePath hasSuffix:@".txt"]) {
-        return @"txt";
-    }
-    return @"";
+    return nil;
 }
 
-+ (NSStringEncoding)encodingForTextFile:(NSString *)filePath
-{
-    NSFileManager *manager = [NSFileManager defaultManager];
-    if (![manager fileExistsAtPath:filePath] || filePath == nil) {
-        return 0;
-    }
-
-    CFStringEncoding cfEncode = 0;
++ (NSStringEncoding)fileEncodingWithFile:(NSString *)path {
+    
+    if (![FileUtils isValidPath:path]) return 0;
 
     char buf[2048];
+    CFStringEncoding cfEncode = 0;
 
-    FILE *file = fopen([filePath UTF8String], "rt");
-    if (file==NULL) {
-        return cfEncode;
-    }
+    FILE *file = fopen([path UTF8String], "rt");
+    if (file==NULL) return cfEncode;
+
     size_t len = fread(buf, sizeof(char), 2048, file);
     fclose(file);
 
@@ -184,7 +183,7 @@
         //txt分带编码和不带编码两种，带编码的如UTF-8格式txt，不带编码的如ANSI格式txt
         //不带的，可以依次尝试GBK和GB18030编码
         NSData *data = [NSData dataWithBytes:buf length:len];
-        enc = [FileInfo otherEncoding:data];
+        enc = [FileUtils otherEncoding:data];
     }
     return enc;
 }

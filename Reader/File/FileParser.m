@@ -7,11 +7,11 @@
 //
 
 #import "FileParser.h"
-#import "FileInfo.h"
+#import "FileUtils.h"
 #import "Book.h"
 #import "DatabaseManager.h"
 
-static NSUInteger kStreamBlockSize = (20 * 1024);
+static NSUInteger kStreamBlockSize = (10 * 1024);
 NSNotificationName const kFileParserFinishedNotification = @"kFileParserFinishedNotification";
 
 
@@ -29,10 +29,6 @@ NSNotificationName const kFileParserFinishedNotification = @"kFileParserFinished
 
 @implementation FileParser
 
-- (void)dealloc
-{
-    NSLog(@"FileLoader dealloc");
-}
 
 - (instancetype)initWithPath:(NSString *)path
 {
@@ -44,21 +40,14 @@ NSNotificationName const kFileParserFinishedNotification = @"kFileParserFinished
     return self;
 }
 
-- (NSInputStream *)inputStream
-{
-    if (!_inputStream) {
-        _inputStream = [[NSInputStream alloc] initWithFileAtPath:self.path];
-        _inputStream.delegate = self;
-    }
-    return _inputStream;
-}
+
 
 - (void)load
 {
     dispatch_queue_t queue = dispatch_queue_create("com.queue.fileLoader", DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
 
-        self.encoding = [FileInfo encodingForTextFile:self.path];
+        self.encoding = [FileUtils fileEncodingWithFile:self.path];
         if (self.encoding == 0) {
             return;
         }
@@ -67,15 +56,6 @@ NSNotificationName const kFileParserFinishedNotification = @"kFileParserFinished
         [self.inputStream scheduleInRunLoop:currentRunLoop forMode:NSRunLoopCommonModes];
         [self.inputStream open];
         [currentRunLoop run];
-    });
-}
-
-- (void)readDataFinished
-{
-    [[DatabaseManager sharedManager] addBookHistory:self.bookName];
-    [self performSelector:@selector(cancel)];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:kFileParserFinishedNotification object:nil];
     });
 }
 
@@ -109,6 +89,18 @@ NSNotificationName const kFileParserFinishedNotification = @"kFileParserFinished
             break;
     }
 }
+
+- (void)readDataFinished
+{
+    [[DatabaseManager sharedManager] addBookHistory:self.bookName];
+    [self performSelector:@selector(cancel)];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:kFileParserFinishedNotification object:nil];
+    });
+}
+
+
+
 
 - (void)stringEncodingForData:(NSData *)data surplusLegth:(NSInteger)length
 {
@@ -231,6 +223,15 @@ NSNotificationName const kFileParserFinishedNotification = @"kFileParserFinished
         [manager addChapter:chapter];
     }
     [manager commit];
+}
+
+- (NSInputStream *)inputStream
+{
+    if (!_inputStream) {
+        _inputStream = [[NSInputStream alloc] initWithFileAtPath:self.path];
+        _inputStream.delegate = self;
+    }
+    return _inputStream;
 }
 
 @end
